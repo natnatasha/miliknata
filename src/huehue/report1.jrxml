@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="415f7f09-c5ef-4a36-95b4-ba7fc9709d20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     penjualan2.`kode_penjualan` AS penjualan2_kode_penjualan,
+     penjualan2.`nama` AS penjualan2_nama,
+     penjualan2.`total` AS penjualan2_total,
+     penjualan2.`tanggal` AS penjualan2_tanggal
+FROM
+     `penjualan2` penjualan2]]>
+	</queryString>
+	<field name="penjualan2_kode_penjualan" class="java.lang.String"/>
+	<field name="penjualan2_nama" class="java.lang.String"/>
+	<field name="penjualan2_total" class="java.lang.String"/>
+	<field name="penjualan2_tanggal" class="java.lang.String"/>
+	<group name="penjualan2_kode_penjualan">
+		<groupExpression><![CDATA[$F{penjualan2_kode_penjualan}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="115" y="26" width="298" height="33" uuid="d191b0d1-6dcf-4f25-930b-f312711d17ce"/>
+				<textElement textAlignment="Center">
+					<font size="24" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Data Penjualan ELSTORE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="59" width="327" height="20" uuid="ebecf634-3ad9-4492-9221-24b683e4f493"/>
+				<textElement textAlignment="Center">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Jl. Terusan Tanjung Biru Kec. Bogor Timur Bogor]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="23" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="37" y="3" width="100" height="20" uuid="450d60f5-1420-4125-9f71-177415d5c72e"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Penjualan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="3" width="100" height="20" uuid="91b5ce5c-47a2-42aa-b5d9-7570090d41d5"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Pembeli]]></text>
+			</staticText>
+			<line>
+				<reportElement x="21" y="23" width="475" height="1" uuid="316251b1-e4d7-490a-b1d6-c08df8807e84"/>
+			</line>
+			<staticText>
+				<reportElement x="273" y="3" width="100" height="20" uuid="2156991b-0433-4227-93e1-c90c0eaf3b69"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="3" width="100" height="20" uuid="0ade4426-9926-45c4-ac03-c055431f640c"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="149" y="0" width="100" height="20" uuid="eec0c0f8-e06a-42a9-a458-8e4bcf0e3b0e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{penjualan2_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="0" width="100" height="20" uuid="7da9773e-0997-4218-8b24-224480890f1b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{penjualan2_kode_penjualan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="0" width="100" height="20" uuid="03692ba1-438f-492b-ba50-328f54181ba4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{penjualan2_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="3" width="100" height="20" uuid="b12e3175-b17d-461c-a3a5-e05c24c5c5bb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{penjualan2_tanggal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
